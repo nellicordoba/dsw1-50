@@ -1,0 +1,2414 @@
+/* ==========================================
+   URBAN STORE
+   EDITORIAL / FASHION DESIGN
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #f2f0eb;
+    color: #111111;
+
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    height: 82px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #f2f0eb;
+
+    position: absolute;
+
+    width: 100%;
+
+    z-index: 20;
+}
+
+
+.logo {
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+
+.logo span {
+    color: #e52b2b;
+}
+
+
+.navbar nav {
+    display: flex;
+
+    gap: 38px;
+}
+
+
+.navbar nav a {
+    color: #555555;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.navbar nav a:hover,
+.navbar nav .activo {
+    color: #111111;
+}
+
+
+.nav-derecha {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color: #555555;
+
+    font-size: 12px;
+}
+
+
+.icono {
+    font-size: 20px;
+
+    color: #111111;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    min-height: 820px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.hero-fondo {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 58%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #d8d0c4 0%,
+            #b5aca0 32%,
+            #888077 60%,
+            #57524d 100%
+        );
+}
+
+
+.hero-fondo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f2f0eb 0%,
+            rgba(242,240,235,0.7) 15%,
+            transparent 50%
+        );
+}
+
+
+.hero-texto {
+    position: relative;
+
+    z-index: 5;
+
+    margin-left: 10%;
+
+    max-width: 650px;
+}
+
+
+.mini-titulo {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+.hero h1 {
+    font-size: clamp(75px, 10vw, 145px);
+
+    line-height: 0.82;
+
+    letter-spacing: -7px;
+
+    font-weight: 700;
+}
+
+
+.hero h1 em {
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 500;
+
+    color: #e52b2b;
+
+    letter-spacing: -5px;
+}
+
+
+.descripcion {
+    max-width: 390px;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-top: 40px;
+
+    margin-bottom: 35px;
+}
+
+
+.link-coleccion {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #111;
+
+    padding-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+
+.link-coleccion span {
+    font-size: 20px;
+}
+
+
+.link-coleccion:hover {
+    gap: 30px;
+
+    color: #e52b2b;
+
+    border-color: #e52b2b;
+}
+
+
+/* ==========================================
+   PRODUCTO HERO
+========================================== */
+
+.hero-producto {
+    position: absolute;
+
+    right: 12%;
+
+    bottom: 100px;
+
+    width: 360px;
+
+    height: 550px;
+
+    z-index: 4;
+}
+
+
+.circulo {
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: #e52b2b;
+
+    position: absolute;
+
+    top: 70px;
+    left: -20px;
+
+    opacity: 0.95;
+}
+
+
+.prenda {
+    position: absolute;
+
+    left: 75px;
+    top: 50px;
+
+    width: 220px;
+    height: 350px;
+
+    background: #161616;
+
+    border-radius: 30px 30px 15px 15px;
+
+    transform: rotate(3deg);
+
+    box-shadow: 25px 30px 40px rgba(0,0,0,0.25);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.prenda span {
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.cuello {
+    position: absolute;
+
+    top: 0;
+    left: 78px;
+
+    width: 65px;
+    height: 50px;
+
+    background: #f2f0eb;
+
+    border-radius: 0 0 40px 40px;
+}
+
+
+.manga {
+    position: absolute;
+
+    width: 90px;
+    height: 150px;
+
+    background: #161616;
+
+    top: 15px;
+}
+
+
+.manga.izquierda {
+    left: -65px;
+
+    transform: rotate(25deg);
+
+    border-radius: 20px;
+}
+
+
+.manga.derecha {
+    right: -65px;
+
+    transform: rotate(-25deg);
+
+    border-radius: 20px;
+}
+
+
+.hero-numero {
+    position: absolute;
+
+    right: -10px;
+    bottom: 0;
+
+    font-size: 90px;
+
+    font-weight: 700;
+
+    color: rgba(255,255,255,0.7);
+}
+
+
+.hero-abajo {
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 5%;
+
+    right: 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #777;
+
+    z-index: 5;
+}
+
+
+.linea-scroll {
+    height: 1px;
+
+    background: #aaa;
+
+    width: 80px;
+}
+
+
+/* ==========================================
+   PRESENTACIÓN
+========================================== */
+
+.presentacion {
+    min-height: 520px;
+
+    padding: 120px 10%;
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr 350px;
+
+    gap: 50px;
+
+    align-items: center;
+
+    background: #111111;
+
+    color: white;
+}
+
+
+.numero-seccion {
+    color: #e52b2b;
+
+    font-size: 13px;
+
+    align-self: start;
+}
+
+
+.etiqueta {
+    color: #e52b2b;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+
+.presentacion h2 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.presentacion h2 span {
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    color: #e52b2b;
+}
+
+
+.presentacion-descripcion p {
+    color: #999;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+.presentacion-descripcion a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #555;
+
+    padding-bottom: 8px;
+}
+
+
+/* ==========================================
+   COLECCIÓN
+========================================== */
+
+.coleccion {
+    padding: 120px 7%;
+
+    background: #f2f0eb;
+}
+
+
+.encabezado {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 60px;
+}
+
+
+.encabezado h2 {
+    font-size: clamp(50px, 6vw, 85px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+}
+
+
+.encabezado h2 em {
+    font-family: 'Playfair Display', serif;
+
+    color: #e52b2b;
+
+    font-weight: 500;
+}
+
+
+.encabezado > a {
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #111;
+
+    padding-bottom: 8px;
+}
+
+
+/* ==========================================
+   GRID PRODUCTOS
+========================================== */
+
+.grid-productos {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 50px 25px;
+}
+
+
+.tarjeta {
+    cursor: pointer;
+}
+
+
+.visual {
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.5s;
+}
+
+
+.tarjeta-grande .visual {
+    height: 650px;
+}
+
+
+.tarjeta:hover .visual {
+    transform: translateY(-8px);
+}
+
+
+.visual-negro {
+    background: #171717;
+}
+
+
+.visual-gris {
+    background: #b7b2aa;
+}
+
+
+.visual-rojo {
+    background: #d92c2c;
+}
+
+
+.visual-claro {
+    background: #d9d4cc;
+}
+
+
+.numero-producto {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    color: rgba(255,255,255,0.5);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.visual-claro .numero-producto,
+.visual-gris .numero-producto {
+    color: rgba(0,0,0,0.4);
+}
+
+
+.tag {
+    position: absolute;
+
+    right: 25px;
+    top: 25px;
+
+    color: white;
+
+    background: #e52b2b;
+
+    padding: 8px 12px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+.tag.blanco {
+    background: white;
+
+    color: #111;
+}
+
+
+/* ==========================================
+   FIGURAS DE PRODUCTOS
+========================================== */
+
+.figura {
+    position: relative;
+
+    transition: 0.6s;
+
+    filter: drop-shadow(25px 30px 25px rgba(0,0,0,0.3));
+}
+
+
+.tarjeta:hover .figura {
+    transform: scale(1.07) rotate(-2deg);
+}
+
+
+.figura.camiseta {
+    width: 250px;
+    height: 380px;
+
+    background: #080808;
+
+    border-radius: 30px 30px 15px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.figura.camiseta span {
+    color: white;
+
+    font-size: 22px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+}
+
+
+.figura .cuello {
+    left: 92px;
+
+    width: 65px;
+
+    background: inherit;
+}
+
+
+.figura.hoodie {
+    width: 245px;
+    height: 350px;
+
+    background: #242424;
+
+    border-radius: 30px 30px 15px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.figura.hoodie span {
+    color: white;
+
+    font-size: 55px;
+
+    font-weight: 700;
+}
+
+
+.capucha {
+    position: absolute;
+
+    width: 100px;
+    height: 80px;
+
+    top: -45px;
+
+    border-radius: 50px;
+
+    background: #242424;
+}
+
+
+.gorra-visual {
+    width: 260px;
+    height: 140px;
+
+    border-radius: 140px 140px 30px 30px;
+
+    background: #101010;
+
+    transform: rotate(-8deg);
+}
+
+
+.gorra-visual div {
+    position: absolute;
+
+    width: 150px;
+    height: 40px;
+
+    right: -90px;
+    bottom: 0;
+
+    background: #101010;
+
+    border-radius: 0 40px 40px 0;
+}
+
+
+.tenis-visual {
+    width: 330px;
+    height: 150px;
+
+    border-radius: 120px 100px 35px 35px;
+
+    background: white;
+
+    transform: rotate(-8deg);
+}
+
+
+.tenis-visual div {
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 35px;
+
+    background: #111;
+
+    border-radius: 0 0 35px 35px;
+}
+
+
+/* ==========================================
+   INFO PRODUCTOS
+========================================== */
+
+.producto-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: start;
+
+    padding: 20px 5px;
+}
+
+
+.producto-info p {
+    color: #888;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+
+.producto-info h3 {
+    font-size: 17px;
+
+    font-weight: 500;
+}
+
+
+.producto-info strong {
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   FRASE
+========================================== */
+
+.frase {
+    min-height: 600px;
+
+    background: #e52b2b;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+.frase p {
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+
+.frase h2 {
+    font-size: clamp(70px, 12vw, 180px);
+
+    line-height: 0.8;
+
+    letter-spacing: -8px;
+}
+
+
+.frase h2 span {
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+.frase-linea {
+    width: 120px;
+
+    height: 1px;
+
+    background: white;
+
+    margin-top: 45px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background: #111;
+
+    color: white;
+
+    padding: 70px 7% 30px;
+}
+
+
+.footer-superior {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    padding-bottom: 60px;
+
+    border-bottom: 1px solid #333;
+}
+
+
+.footer-superior .logo {
+    color: white;
+}
+
+
+.footer-superior p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+.footer-superior a {
+    justify-self: end;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+.footer-inferior {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 25px;
+
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-derecha span:first-child {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: 750px;
+    }
+
+
+    .hero-producto {
+        right: 4%;
+
+        opacity: 0.5;
+    }
+
+
+    .presentacion {
+        grid-template-columns: 50px 1fr;
+    }
+
+
+    .presentacion-descripcion {
+        grid-column: 2;
+    }
+
+
+    .grid-productos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 5%;
+    }
+
+
+    .navbar nav {
+        display: none;
+    }
+
+
+    .hero {
+        min-height: 720px;
+    }
+
+
+    .hero-fondo {
+        width: 100%;
+    }
+
+
+    .hero-texto {
+        margin-left: 7%;
+
+        margin-right: 7%;
+
+        align-self: start;
+
+        margin-top: 170px;
+    }
+
+
+    .hero h1 {
+        font-size: 70px;
+
+        letter-spacing: -5px;
+    }
+
+
+    .hero-producto {
+        right: 5%;
+
+        bottom: 50px;
+
+        transform: scale(0.7);
+
+        opacity: 0.85;
+    }
+
+
+    .hero-abajo {
+        display: none;
+    }
+
+
+    .presentacion {
+        display: block;
+
+        padding: 90px 7%;
+    }
+
+
+    .numero-seccion {
+        margin-bottom: 40px;
+    }
+
+
+    .presentacion-descripcion {
+        margin-top: 45px;
+    }
+
+
+    .coleccion {
+        padding: 80px 6%;
+    }
+
+
+    .encabezado {
+        display: block;
+    }
+
+
+    .encabezado > a {
+        display: inline-block;
+
+        margin-top: 25px;
+    }
+
+
+    .grid-productos {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .tarjeta-grande .visual,
+    .visual {
+        height: 450px;
+    }
+
+
+    .frase {
+        min-height: 450px;
+    }
+
+
+    .frase h2 {
+        font-size: 70px;
+
+        letter-spacing: -5px;
+    }
+
+
+    .footer-superior {
+        display: block;
+    }
+
+
+    .footer-superior p {
+        margin: 25px 0;
+    }
+
+
+    .footer-inferior {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+}
+
+/* ==========================================
+   PÁGINA COLECCIÓN
+========================================== */
+
+.catalogo-hero {
+    min-height: 570px;
+
+    padding: 170px 8% 80px;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.catalogo-hero::after {
+    content: "COLLECTION";
+
+    position: absolute;
+
+    right: -20px;
+    bottom: -50px;
+
+    font-size: 150px;
+
+    font-weight: 700;
+
+    color: rgba(255,255,255,0.035);
+
+    letter-spacing: -8px;
+}
+
+.catalogo-hero .etiqueta {
+    margin-bottom: 25px;
+}
+
+.catalogo-hero h1 {
+    font-size: clamp(65px, 9vw, 125px);
+
+    line-height: 0.82;
+
+    letter-spacing: -6px;
+}
+
+.catalogo-hero h1 em {
+    font-family: 'Playfair Display', serif;
+
+    color: #e52b2b;
+
+    font-weight: 500;
+}
+
+.catalogo-hero > div {
+    position: relative;
+
+    z-index: 2;
+}
+
+.catalogo-hero > div > p:last-child {
+    color: #999;
+
+    max-width: 380px;
+
+    line-height: 1.7;
+
+    margin-top: 35px;
+}
+
+.catalogo-numero {
+    position: relative;
+
+    z-index: 2;
+
+    color: #e52b2b;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* BARRA */
+
+.catalogo {
+    padding: 80px 7% 120px;
+
+    background: #f2f0eb;
+}
+
+.catalogo-barra {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #ccc;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 45px;
+}
+
+
+/* GRID */
+
+.catalogo-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 70px 25px;
+}
+
+
+.producto-catalogo {
+    cursor: pointer;
+}
+
+
+.producto-visual {
+    height: 570px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.5s;
+}
+
+
+.producto-catalogo:hover .producto-visual {
+    transform: translateY(-7px);
+}
+
+
+.producto-numero {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    font-size: 11px;
+
+    color: rgba(255,255,255,0.5);
+
+    letter-spacing: 2px;
+
+    z-index: 2;
+}
+
+
+.producto-tag {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    background: #e52b2b;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    z-index: 3;
+}
+
+
+.blanco-tag {
+    background: white;
+
+    color: #111;
+}
+
+
+/* FONDOS */
+
+.camiseta-cat {
+    background: #181818;
+}
+
+.hoodie-cat {
+    background: #aaa49b;
+}
+
+.jeans-cat {
+    background: #303b4a;
+}
+
+.gorra-cat {
+    background: #d82c2c;
+}
+
+.chaqueta-cat {
+    background: #202020;
+}
+
+.tenis-cat {
+    background: #d6d0c6;
+}
+
+
+/* FIGURA CAMISETA */
+
+.figura-camiseta {
+    width: 270px;
+    height: 400px;
+
+    background: #050505;
+
+    border-radius: 35px 35px 15px 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    box-shadow: 30px 40px 40px rgba(0,0,0,0.3);
+
+    transition: 0.6s;
+}
+
+.producto-catalogo:hover .figura-camiseta {
+    transform: rotate(-4deg) scale(1.05);
+}
+
+.figura-camiseta::before,
+.figura-camiseta::after {
+    content: "";
+
+    position: absolute;
+
+    top: 20px;
+
+    width: 110px;
+    height: 170px;
+
+    background: #050505;
+
+    border-radius: 25px;
+}
+
+.figura-camiseta::before {
+    left: -80px;
+
+    transform: rotate(25deg);
+}
+
+.figura-camiseta::after {
+    right: -80px;
+
+    transform: rotate(-25deg);
+}
+
+.figura-camiseta div {
+    position: absolute;
+
+    top: 0;
+
+    width: 75px;
+    height: 55px;
+
+    background: #181818;
+
+    border-radius: 0 0 50px 50px;
+}
+
+.figura-camiseta span {
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+/* HOODIE */
+
+.figura-hoodie {
+    width: 260px;
+    height: 380px;
+
+    background: #252525;
+
+    border-radius: 35px 35px 15px 15px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow: 25px 35px 40px rgba(0,0,0,0.25);
+
+    transition: 0.6s;
+}
+
+.producto-catalogo:hover .figura-hoodie {
+    transform: scale(1.06) rotate(2deg);
+}
+
+.figura-hoodie::before,
+.figura-hoodie::after {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+
+    width: 105px;
+    height: 180px;
+
+    background: #252525;
+
+    border-radius: 25px;
+}
+
+.figura-hoodie::before {
+    left: -75px;
+
+    transform: rotate(25deg);
+}
+
+.figura-hoodie::after {
+    right: -75px;
+
+    transform: rotate(-25deg);
+}
+
+.capucha-cat {
+    position: absolute;
+
+    top: -45px;
+
+    width: 110px;
+    height: 100px;
+
+    border-radius: 60px;
+
+    background: #252525;
+}
+
+.figura-hoodie span {
+    color: white;
+
+    font-size: 70px;
+
+    font-weight: 700;
+}
+
+
+/* JEANS */
+
+.figura-jeans {
+    width: 250px;
+    height: 410px;
+
+    position: relative;
+
+    display: flex;
+
+    gap: 7px;
+
+    justify-content: center;
+
+    transition: 0.6s;
+}
+
+.producto-catalogo:hover .figura-jeans {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.figura-jeans div {
+    width: 115px;
+
+    height: 390px;
+
+    background: #152c48;
+
+    border-radius: 10px 10px 35px 35px;
+}
+
+.figura-jeans div:first-child {
+    transform: rotate(3deg);
+}
+
+.figura-jeans div:last-child {
+    transform: rotate(-3deg);
+}
+
+
+/* GORRA */
+
+.figura-gorra {
+    width: 280px;
+    height: 145px;
+
+    background: #111;
+
+    border-radius: 150px 150px 30px 30px;
+
+    transform: rotate(-7deg);
+
+    box-shadow: 25px 30px 35px rgba(0,0,0,0.25);
+
+    transition: 0.6s;
+}
+
+.producto-catalogo:hover .figura-gorra {
+    transform: rotate(-3deg) scale(1.08);
+}
+
+.figura-gorra div {
+    position: absolute;
+
+    right: -110px;
+
+    bottom: 0;
+
+    width: 170px;
+
+    height: 45px;
+
+    background: #111;
+
+    border-radius: 0 50px 50px 0;
+}
+
+
+/* CHAQUETA */
+
+.figura-chaqueta {
+    width: 280px;
+    height: 410px;
+
+    background: #090909;
+
+    border-radius: 30px;
+
+    position: relative;
+
+    box-shadow: 30px 40px 45px rgba(0,0,0,0.35);
+
+    transition: 0.6s;
+}
+
+.producto-catalogo:hover .figura-chaqueta {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.figura-chaqueta::before,
+.figura-chaqueta::after {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+
+    width: 100px;
+    height: 190px;
+
+    background: #090909;
+
+    border-radius: 20px;
+}
+
+.figura-chaqueta::before {
+    left: -70px;
+
+    transform: rotate(20deg);
+}
+
+.figura-chaqueta::after {
+    right: -70px;
+
+    transform: rotate(-20deg);
+}
+
+.cremallera {
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    height: 100%;
+
+    width: 2px;
+
+    background: #777;
+}
+
+
+/* TENIS */
+
+.figura-tenis {
+    width: 350px;
+
+    height: 155px;
+
+    background: white;
+
+    border-radius: 120px 120px 30px 30px;
+
+    transform: rotate(-7deg);
+
+    box-shadow: 30px 35px 40px rgba(0,0,0,0.2);
+
+    position: relative;
+
+    transition: 0.6s;
+}
+
+.producto-catalogo:hover .figura-tenis {
+    transform: rotate(-3deg) scale(1.06);
+}
+
+.figura-tenis div {
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 38px;
+
+    background: #111;
+
+    border-radius: 0 0 35px 35px;
+}
+
+
+/* INFORMACIÓN */
+
+.producto-datos {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 20px 4px;
+}
+
+.producto-datos small {
+    color: #888;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+}
+
+.producto-datos h2 {
+    font-size: 20px;
+
+    font-weight: 500;
+
+    margin: 7px 0;
+}
+
+.producto-datos p {
+    color: #999;
+
+    font-size: 11px;
+}
+
+.producto-datos strong {
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* FINAL */
+
+.catalogo-final {
+    min-height: 500px;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.catalogo-final p {
+    color: #e52b2b;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+}
+
+.catalogo-final h2 {
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+}
+
+.catalogo-final h2 em {
+    font-family: 'Playfair Display', serif;
+
+    color: #e52b2b;
+
+    font-weight: 500;
+}
+
+.catalogo-final a {
+    color: white;
+
+    text-decoration: none;
+
+    margin-top: 45px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid #777;
+
+    padding-bottom: 8px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .catalogo-hero {
+        min-height: 500px;
+
+        padding: 140px 7% 70px;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .producto-visual,
+    .tarjeta-grande .visual {
+        height: 450px;
+    }
+
+    .producto-datos {
+        padding-bottom: 0;
+    }
+}
+
+```css id="x5j8qp"
+/* ==========================================
+   PÁGINA NOSOTROS
+========================================== */
+
+.nosotros-hero {
+    min-height: 620px;
+
+    background: #d7d0c5;
+
+    padding: 160px 9% 80px;
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.nosotros-hero::after {
+    content: "URBAN";
+
+    position: absolute;
+
+    right: -30px;
+    bottom: -65px;
+
+    font-size: 190px;
+
+    font-weight: 700;
+
+    letter-spacing: -12px;
+
+    color: rgba(0,0,0,0.04);
+}
+
+.nosotros-hero-texto {
+    position: relative;
+
+    z-index: 2;
+}
+
+.nosotros-hero h1 {
+    font-size: clamp(70px, 10vw, 140px);
+
+    line-height: 0.8;
+
+    letter-spacing: -7px;
+
+    margin-top: 20px;
+}
+
+.nosotros-hero h1 em {
+    font-family: 'Playfair Display', serif;
+
+    color: #e52b2b;
+
+    font-weight: 500;
+}
+
+.nosotros-hero-texto > p:last-child {
+    max-width: 400px;
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-top: 40px;
+}
+
+.nosotros-numero {
+    position: relative;
+
+    z-index: 2;
+
+    color: #e52b2b;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+/* ==========================================
+   HISTORIA
+========================================== */
+
+.historia {
+    min-height: 650px;
+
+    padding: 120px 9%;
+
+    background: #111;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr 300px;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.historia-numero {
+    color: #e52b2b;
+
+    font-size: 12px;
+
+    align-self: start;
+}
+
+.historia-contenido .etiqueta {
+    margin-bottom: 25px;
+}
+
+.historia-contenido h2 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+
+    max-width: 750px;
+
+    margin-bottom: 50px;
+}
+
+.historia-contenido h2 em {
+    font-family: 'Playfair Display', serif;
+
+    color: #e52b2b;
+
+    font-weight: 500;
+}
+
+.historia-texto {
+    color: #999;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    max-width: 600px;
+
+    margin-bottom: 20px;
+}
+
+.historia-frase {
+    border-left: 1px solid #444;
+
+    padding-left: 30px;
+
+    color: #777;
+}
+
+.historia-frase span {
+    display: block;
+
+    color: #e52b2b;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.historia-frase strong {
+    color: white;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+}
+
+
+/* ==========================================
+   VALORES
+========================================== */
+
+.valores {
+    padding: 120px 8%;
+
+    background: #f2f0eb;
+}
+
+.valores-titulo {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 70px;
+}
+
+.valores-titulo h2 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+}
+
+.valores-titulo h2 em {
+    font-family: 'Playfair Display', serif;
+
+    color: #e52b2b;
+
+    font-weight: 500;
+}
+
+.valores-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #bbb;
+}
+
+.valores-grid article {
+    padding: 35px 25px 20px 0;
+
+    border-right: 1px solid #bbb;
+
+    margin-right: 25px;
+}
+
+.valores-grid article:last-child {
+    border-right: none;
+
+    margin-right: 0;
+}
+
+.valores-grid article > span {
+    color: #e52b2b;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.valores-grid h3 {
+    font-size: 28px;
+
+    font-weight: 500;
+
+    margin: 45px 0 15px;
+}
+
+.valores-grid p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    max-width: 280px;
+}
+
+
+/* ==========================================
+   MISIÓN
+========================================== */
+
+.mision {
+    min-height: 700px;
+
+    background: #e52b2b;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+}
+
+.mision-imagen {
+    height: 100%;
+
+    min-height: 700px;
+
+    background:
+        radial-gradient(
+            circle,
+            #222 0 25%,
+            #111 26% 60%,
+            #090909 61%
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.mision-circulo {
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    border: 1px solid #e52b2b;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 120px;
+
+    font-weight: 700;
+
+    color: #e52b2b;
+}
+
+.mision-imagen > span {
+    position: absolute;
+
+    bottom: 35px;
+    left: 40px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.mision-texto {
+    padding: 80px 12%;
+}
+
+.mision-texto .etiqueta {
+    color: white;
+}
+
+.mision-texto h2 {
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 40px;
+}
+
+.mision-texto h2 em {
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 500;
+}
+
+.mision-texto > p:not(.etiqueta) {
+    max-width: 400px;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.mision-texto a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+
+    padding-bottom: 8px;
+}
+
+
+/* ==========================================
+   CONTACTO
+========================================== */
+
+.contacto {
+    padding: 120px 8%;
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: clamp(55px, 8vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    margin: 25px auto 80px;
+}
+
+.contacto h2 em {
+    font-family: 'Playfair Display', serif;
+
+    color: #e52b2b;
+
+    font-weight: 500;
+}
+
+.contacto-datos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #333;
+
+    padding-top: 35px;
+}
+
+.contacto-datos div {
+    border-right: 1px solid #333;
+}
+
+.contacto-datos div:last-child {
+    border: none;
+}
+
+.contacto-datos span {
+    color: #e52b2b;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.contacto-datos p {
+    margin-top: 12px;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   RESPONSIVE NOSOTROS
+========================================== */
+
+@media (max-width: 800px) {
+
+    .historia {
+        grid-template-columns: 1fr;
+
+        padding: 90px 7%;
+    }
+
+    .historia-frase {
+        margin-top: 30px;
+    }
+
+    .valores-titulo {
+        display: block;
+    }
+
+    .valores-titulo h2 {
+        margin-top: 30px;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valores-grid article {
+        border-right: none;
+
+        border-bottom: 1px solid #bbb;
+
+        margin: 0;
+
+        padding: 35px 0;
+    }
+
+    .mision {
+        grid-template-columns: 1fr;
+    }
+
+    .mision-imagen {
+        min-height: 450px;
+    }
+
+    .contacto-datos {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .contacto-datos div {
+        border-right: none;
+
+        border-bottom: 1px solid #333;
+
+        padding-bottom: 25px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .nosotros-hero {
+        min-height: 550px;
+
+        padding: 140px 7% 70px;
+    }
+
+    .nosotros-hero h1 {
+        font-size: 70px;
+
+        letter-spacing: -5px;
+    }
+
+    .valores {
+        padding: 80px 7%;
+    }
+
+    .mision-texto {
+        padding: 70px 8%;
+    }
+
+    .contacto {
+        padding: 80px 7%;
+    }
+}
